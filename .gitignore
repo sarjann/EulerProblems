@@ -1,0 +1,9 @@
+*.pyc
+*.py
+__pycache__/
+cmake-build-debug/
+cmake-build-debug-home-remote/
+CMakeLists.txt
+test/
+.idea/
+main
