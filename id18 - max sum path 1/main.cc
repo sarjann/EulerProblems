@@ -4,6 +4,7 @@
 #include <curlpp/cURLpp.hpp>
 #include <curlpp/Options.hpp>
 #include <vector>
+#include <ctime>
 
 using namespace std;
 
@@ -30,7 +31,15 @@ vector< vector <int> > arr = {
 };
 
 int main(){
+    clock_t start;
+    double duration;
+    start = clock();
+
     route_search(0, 0, 75);
+
+    duration = (clock() - start ) / (double) CLOCKS_PER_SEC;
+
+    cout << duration*1000 << "ms"<< endl;
     cout << max_val << endl;
 
 }
